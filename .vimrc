@@ -21,9 +21,6 @@ Plugin 'Raimondi/delimitMate'
 " tab line
 Plugin 'itchyny/lightline.vim'
 
-" git gutter
-Plugin 'airblade/vim-gitgutter'
-
 " git branch
 Plugin 'itchyny/vim-gitbranch'
 
@@ -114,7 +111,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " lightline config
 set laststatus=2
 let g:lightline = {
-  \ 'colorscheme': 'solarized',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -131,10 +127,6 @@ let g:lightline = {
   \   'gitbranch': 'gitbranch#name'
   \ }
   \ }
-
-" git gutter config
-let g:gitgutter_realtime = 100
-let g:gitgutter_eager = 100
 
 " emmet config
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
