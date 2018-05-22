@@ -46,4 +46,5 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
 # Project Shortcuts
-alias veritas='cd ~/projects/veritas-design-system
+alias veritas='cd ~/projects/veritas-design-system'
+
