@@ -24,6 +24,9 @@ Plugin 'itchyny/lightline.vim'
 " git gutter
 Plugin 'airblade/vim-gitgutter'
 
+" git branch
+Plugin 'itchyny/vim-gitbranch'
+
 " emmet
 Plugin 'mattn/emmet-vim'
 
@@ -37,8 +40,9 @@ Plugin 'tomtom/tcomment_vim'
 call vundle#end()
 filetype plugin indent on
 
-" remap Esc to jk
+" remap Esc to jk/kj
 inoremap jk <ESC>
+inoremap kj <ESC>
 
 " enable ruler and line numbers
 set ruler
@@ -113,17 +117,18 @@ let g:lightline = {
   \ 'colorscheme': 'solarized',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
   \ },
   \ 'component': {
   \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
   \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-  \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
   \ },
   \ 'component_visible_condition': {
   \   'readonly': '(&filetype!="help"&& &readonly)',
-  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-  \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'gitbranch#name'
   \ }
   \ }
 
