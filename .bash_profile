@@ -1,5 +1,5 @@
-#   Change Prompt
-#   ------------------------------------------------------------
+# Change Prompt
+# ------------------------------------------------------------
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -11,8 +11,8 @@ export BLOCKSIZE=1k
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-#   Navigation
-#   ------------------------------------------------------------
+# Navigation
+# ------------------------------------------------------------
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
@@ -29,8 +29,8 @@ alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias f='open -a Finder ./'                 # Opens current directory in MacOS Finder
 alias c='clear'                             # Clear terminal display
 
-#   Git Commands
-#   ------------------------------------------------------------
+# Git Commands
+# ------------------------------------------------------------
 
 alias gs='git status'                       # Git status
 alias ga='git add'                          # Git add 
@@ -46,4 +46,4 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
 # Project Shortcuts
-alias veritas='cd ~/projects/veritas-design-system && git pull --all
+alias veritas='cd ~/projects/veritas-design-system
