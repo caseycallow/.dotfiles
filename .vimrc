@@ -21,18 +21,6 @@ Plugin 'Raimondi/delimitMate'
 " tab line
 Plugin 'itchyny/lightline.vim'
 
-" git fugitive
-Plugin 'tpope/vim-fugitive'
-
-" tree view
-Plugin 'scrooloose/nerdtree'
-
-" git tree
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-
-" fuzzy finder
-Plugin 'ctrlpvim/ctrlp.vim'
-
 " git gutter
 Plugin 'airblade/vim-gitgutter'
 
@@ -56,19 +44,7 @@ inoremap jk <ESC>
 set ruler
 set number
 
-if (empty($TMUX))
-  if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
+" color scheme
 colorscheme one
 set background=dark
 syntax enable
@@ -151,17 +127,10 @@ let g:lightline = {
   \ }
   \ }
 
-" nerd tree config
-map <C-\> :NERDTreeToggle<CR>
-autocmd VimEnter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" fuzzy finder config
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
 " git gutter config
 let g:gitgutter_realtime = 100
 let g:gitgutter_eager = 100
 
 " emmet config
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
