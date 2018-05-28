@@ -33,6 +33,9 @@ Plugin 'ap/vim-css-color'
 " comment toggle
 Plugin 'tomtom/tcomment_vim'
 
+" prettier
+Plugin 'prettier/vim-prettier'
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -131,3 +134,14 @@ let g:lightline = {
 " emmet config
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
+" prettier config
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+let g:prettier#config#parse = 'babylon'
+let g:prettier#config#single_quote = 'false'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'true'
+let g:prettier#config#trailing_comma = 'false'
+
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
