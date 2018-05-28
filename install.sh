@@ -2,7 +2,7 @@
 
 # go to home directory
 
-cd ~/
+cd ~
 
 echo configuring dotfiles...
 
