@@ -1,4 +1,3 @@
-Personal config files for Bash, Vim, and Tmux.
+`git clone https://github.com/caseycallow/.dotfiles.git`
 
-1. `git clone https://github.com/caseycallow/.dotfiles.git`
-2. `sh .dotfiles/install.sh`
+`sh .dotfiles/install.sh`
