@@ -15,8 +15,8 @@ Plugin 'rakr/vim-one'
 " languages syntax
 Plugin 'sheerun/vim-polyglot'
 
-" automatic closing of quotes, parenthesis, brackets, etc.
-Plugin 'Raimondi/delimitMate'
+" auto pairs
+Plugin 'jiangmiao/auto-pairs'
 
 " tab line
 Plugin 'itchyny/lightline.vim'
