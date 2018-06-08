@@ -67,8 +67,8 @@ set shiftwidth=2
 set expandtab
 
 " store temporary files in separate folder
-set backupdir=$TEMP//
-set directory=$TEMP//
+set swapfile
+set dir=~/tmp
 
 " ignore case of searches
 set ignorecase
