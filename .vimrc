@@ -66,6 +66,10 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" store temporary files in separate folder
+set backupdir=$TEMP//
+set directory=$TEMP//
+
 " ignore case of searches
 set ignorecase
 
