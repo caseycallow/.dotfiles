@@ -36,6 +36,12 @@ Plugin 'tomtom/tcomment_vim'
 " prettier
 Plugin 'prettier/vim-prettier'
 
+" fuzzy find
+Plugin 'junegunn/fzf.vim'
+
+" set path for fzf
+set rtp+=/usr/local/opt/fzf
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -52,6 +58,7 @@ set number
 colorscheme one
 set background=dark
 syntax enable
+hi! Normal ctermbg=NONE guibg=NONE
 
 " soft tabs
 set tabstop=2
