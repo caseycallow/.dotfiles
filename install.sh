@@ -27,4 +27,7 @@ vim +PluginInstall +qall
 
 echo vim packages installed
 
+# create tmp folder for vim
+mkdir ~/tmp
+
 echo Success! All dotfiles symlinked and configured.
