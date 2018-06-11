@@ -25,6 +25,12 @@ mkdir bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
+# set up fzf
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+source ~/.bashrc ~./bash_profile
+
 echo vim packages installed
 
 echo Success! All dotfiles symlinked and configured.

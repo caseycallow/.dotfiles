@@ -40,7 +40,7 @@ Plugin 'sbdchd/neoformat'
 Plugin 'junegunn/fzf.vim'
 
 " set path for fzf
-set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 
 " all plugins must be added before the following line
 call vundle#end()
