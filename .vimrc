@@ -33,8 +33,8 @@ Plugin 'ap/vim-css-color'
 " comment toggle
 Plugin 'tomtom/tcomment_vim'
 
-" prettier
-Plugin 'prettier/vim-prettier'
+" neoformat
+Plugin 'sbdchd/neoformat'
 
 " fuzzy find
 Plugin 'junegunn/fzf.vim'
@@ -68,7 +68,7 @@ set expandtab
 
 " store temporary files in separate folder
 set swapfile
-set dir=~/tmp
+set dir=/tmp
 
 " ignore case of searches
 set ignorecase
@@ -91,9 +91,6 @@ set nowrap
 " don’t reset cursor to start of line when moving around
 set nostartofline
 
-" don’t add empty newlines at the end of files
-set noeol
-
 " start scrolling three lines before the horizontal window border
 set scrolloff=3
 
@@ -112,15 +109,6 @@ let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
 
 " remap ctrl-c to esc
 inoremap <C-c> <Esc><Esc>
-
-" strip trailing spaces
-fun! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
-endfun
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " lightline config
 set laststatus=2
@@ -145,14 +133,8 @@ let g:lightline = {
 " emmet config
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-" prettier config
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat = 0
-let g:prettier#config#parse = 'babylon'
-let g:prettier#config#single_quote = 'false'
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#jsx_bracket_same_line = 'false'
-let g:prettier#config#arrow_parens = 'true'
-let g:prettier#config#trailing_comma = 'false'
-
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+" Neoformat config
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
