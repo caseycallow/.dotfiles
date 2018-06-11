@@ -42,6 +42,9 @@ Plugin 'junegunn/fzf.vim'
 " set path for fzf
 set rtp+=~/.fzf
 
+" remap fzf to always use GitFiles when searching
+nnoremap <c-t> :GFiles<cr>
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
