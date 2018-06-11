@@ -3,7 +3,7 @@
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}   
+}
 export PS1="\n\033[33m\]\$(parse_git_branch)\[\033[00m\] \[\e[32m\] ➜ \[\e[0m\]"
 
 export BLOCKSIZE=1k
@@ -33,13 +33,13 @@ alias c='clear'                             # Clear terminal display
 # ------------------------------------------------------------
 
 alias gs='git status'                       # Git status
-alias ga='git add'                          # Git add 
+alias ga='git add'                          # Git add
 alias gc='git commit'                       # Git commit
 alias gb='git branch'                       # Git branch
 alias gd='git diff'                         # Git diff
 alias gds='git diff --cached'               # Git diff only staged files
 alias go='git checkout'                     # Git checkout
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit' # Git log 
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit' # Git log
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
@@ -47,4 +47,4 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 
 # Project Shortcuts
 alias veritas='cd ~/projects/veritas-design-system'
-
+alias dot='cd ~/.dotfiles && vim .'
