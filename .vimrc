@@ -39,15 +39,15 @@ Plugin 'sbdchd/neoformat'
 " fuzzy find
 Plugin 'junegunn/fzf.vim'
 
+" all plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
+
 " set path for fzf
 set rtp+=~/.fzf
 
 " remap fzf to always use GitFiles when searching
 nnoremap <c-t> :GFiles<cr>
-
-" all plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on
 
 " remap Esc to jk/kj
 inoremap jk <ESC>
@@ -112,6 +112,11 @@ let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
 
 " remap ctrl-c to esc
 inoremap <C-c> <Esc><Esc>
+
+" remap zz to save
+nnoremap zz :update<CR>
+inoremap zz <Esc>:update<CR>
+vnoremap zz <Esc>:update<CR>
 
 " lightline config
 set laststatus=2
