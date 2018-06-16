@@ -120,6 +120,7 @@ vnoremap zz <Esc>:update<CR>
 
 " lightline config
 set laststatus=2
+set noshowmode
 let g:lightline = {
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
