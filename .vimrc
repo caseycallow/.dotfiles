@@ -39,6 +39,9 @@ Plugin 'sbdchd/neoformat'
 " fuzzy find
 Plugin 'junegunn/fzf.vim'
 
+" git gutter
+Plugin 'airblade/vim-gitgutter'
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -143,3 +146,11 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+" git gutter config
+set updatetime=100
+let g:gitgutter_sign_added = '•'
+let g:gitgutter_sign_modified = '•'
+let g:gitgutter_sign_removed = '•'
+let g:gitgutter_sign_modified_removed = '•'
+let g:gitgutter_sign_removed_first_line = '•'
