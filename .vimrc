@@ -82,9 +82,6 @@ set incsearch
 " show the filename in the window titlebar
 set title
 
-" don’t reset cursor to start of line when moving around
-set nostartofline
-
 " show the (partial) command as it’s being typed
 set showcmd
 
