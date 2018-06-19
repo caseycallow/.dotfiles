@@ -62,7 +62,6 @@ set number
 
 " refresh changed content of opened file when cursor stops moving
 set autoread
-iau CursorHold,CursorHoldI * checktime
 
 " color scheme
 colorscheme one
