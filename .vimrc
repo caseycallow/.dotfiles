@@ -42,6 +42,9 @@ Plugin 'junegunn/fzf.vim'
 " git gutter
 Plugin 'airblade/vim-gitgutter'
 
+" vim tmux navigator
+Plugin 'christoomey/vim-tmux-navigator'
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -61,6 +64,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" vv to generate new vertical split
+nnoremap <silent> vv <C-w>v
 
 " change default split open direction
 set splitbelow
