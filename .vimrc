@@ -72,6 +72,11 @@ nnoremap <silent> vv <C-w>v
 set splitbelow
 set splitright
 
+" remap ; to :
+" hit ; twice if ; is needed
+map ; :
+noremap ;; ;
+
 " enable ruler and line numbers
 set ruler
 set number
