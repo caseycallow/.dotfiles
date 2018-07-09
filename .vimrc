@@ -48,6 +48,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " vim maximizer
 Plugin 'szw/vim-maximizer'
 
+" autocomplete
+Plugin 'ajh17/VimCompletesMe'
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -68,6 +71,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" map == to toggle fullscreen active window
 nnoremap <silent>== :MaximizerToggle<CR>
 
 " vv to generate new vertical split
@@ -94,6 +98,7 @@ colorscheme one
 set background=dark
 syntax enable
 hi! Normal ctermbg=NONE guibg=NONE
+highlight Pmenu ctermbg=238 gui=bold
 
 " soft tabs
 set tabstop=2
@@ -184,3 +189,8 @@ let g:gitgutter_sign_modified = '•'
 let g:gitgutter_sign_removed = '•'
 let g:gitgutter_sign_modified_removed = '•'
 let g:gitgutter_sign_removed_first_line = '•'
+
+" VimCompletesMe config
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+autocmd InsertLeave * if bufname('%') != '[Command Line]' | pclose | endif
