@@ -45,6 +45,9 @@ Plugin 'airblade/vim-gitgutter'
 " vim tmux navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
+" vim maximizer
+Plugin 'szw/vim-maximizer'
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -53,7 +56,7 @@ filetype plugin indent on
 set rtp+=~/.fzf
 
 " remap fzf to always use GitFiles when searching
-nnoremap <c-t> :GFiles<cr>
+nnoremap <c-t> :GFiles<CR>
 
 " remap Esc to jk/kj
 inoremap jk <ESC>
@@ -64,6 +67,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+nnoremap <silent>== :MaximizerToggle<CR>
 
 " vv to generate new vertical split
 nnoremap <silent> vv <C-w>v
