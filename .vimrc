@@ -42,14 +42,14 @@ Plugin 'junegunn/fzf.vim'
 " git gutter
 Plugin 'airblade/vim-gitgutter'
 
-" vim tmux navigator
-Plugin 'christoomey/vim-tmux-navigator'
-
 " vim maximizer
 Plugin 'szw/vim-maximizer'
 
 " autocomplete
 Plugin 'ajh17/VimCompletesMe'
+
+" auto sessions
+Plugin 'powerman/vim-plugin-autosess'
 
 " all plugins must be added before the following line
 call vundle#end()
