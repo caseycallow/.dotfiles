@@ -55,15 +55,26 @@ Plugin 'powerman/vim-plugin-autosess'
 call vundle#end()
 filetype plugin indent on
 
+" map leader to space
+let g:mapleader=" "
+
+" remap <leader>s to save
+nnoremap <leader>s :update<CR>
+inoremap <leader>s <Esc>:update<CR>
+vnoremap <leader>s <Esc>:update<CR>
+
+" remap ctrl-c to esc
+inoremap <C-c> <Esc><Esc>
+
+" remap Esc to jk/kj
+inoremap jk <ESC>
+inoremap kj <ESC>
+
 " set path for fzf
 set rtp+=~/.fzf
 
 " remap fzf to always use GitFiles when searching
 nnoremap <c-t> :GFiles<CR>
-
-" remap Esc to jk/kj
-inoremap jk <ESC>
-inoremap kj <ESC>
 
 " simplify moving between splits
 nnoremap <C-J> <C-W><C-J>
@@ -131,6 +142,9 @@ set nostartofline
 " start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" mouse control
+set mouse=a
+
 " disable cursorline in insert mode
 set cul
 autocmd InsertEnter,InsertLeave * set nocul!
@@ -146,11 +160,6 @@ let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
 
 " remap ctrl-c to esc
 inoremap <C-c> <Esc><Esc>
-
-" remap zz to save
-nnoremap zz :update<CR>
-inoremap zz <Esc>:update<CR>
-vnoremap zz <Esc>:update<CR>
 
 " lightline config
 set laststatus=2
