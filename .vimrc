@@ -60,8 +60,10 @@ let g:mapleader=" "
 
 " remap <leader>s to save
 nnoremap <leader>s :update<CR>
-inoremap <leader>s <Esc>:update<CR>
 vnoremap <leader>s <Esc>:update<CR>
+
+" quit all with <leader>q
+noremap <leader>q :qa<CR>
 
 " remap ctrl-c to esc
 inoremap <C-c> <Esc><Esc>
