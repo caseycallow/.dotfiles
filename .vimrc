@@ -48,9 +48,6 @@ Plugin 'szw/vim-maximizer'
 " autocomplete
 Plugin 'ajh17/VimCompletesMe'
 
-" auto sessions
-Plugin 'powerman/vim-plugin-autosess'
-
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -62,8 +59,9 @@ let g:mapleader=" "
 nnoremap <leader>s :update<CR>
 vnoremap <leader>s <Esc>:update<CR>
 
-" quit all with <leader>q
-noremap <leader>q :qa<CR>
+" temporarily close and save Vim with <leader>q
+" reopen in command line w/ fg
+noremap <leader>q <C-z>
 
 " remap ctrl-c to esc
 inoremap <C-c> <Esc><Esc>
