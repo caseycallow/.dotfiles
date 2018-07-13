@@ -205,6 +205,15 @@ let g:gitgutter_sign_removed = '•'
 let g:gitgutter_sign_modified_removed = '•'
 let g:gitgutter_sign_removed_first_line = '•'
 
+" fugitive mappings
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>gds :Gdiff --cached<CR>
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>ga :Git add -p<CR>
+nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>go :Git checkout
+
 " VimCompletesMe config
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
