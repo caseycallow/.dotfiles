@@ -48,6 +48,9 @@ Plugin 'szw/vim-maximizer'
 " autocomplete
 Plugin 'ajh17/VimCompletesMe'
 
+" fugitive
+Plugin 'tpope/vim-fugitive'
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -90,9 +93,6 @@ nnoremap <Leader>m :MaximizerToggle<CR>
 
 " vv to generate new vertical split
 nnoremap <silent> vv <C-w>v
-
-" hh to generate new horizontal split
-nnoremap <silent> hh <C-w>S
 
 " change default split open direction
 set splitbelow
