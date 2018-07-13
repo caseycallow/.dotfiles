@@ -55,26 +55,29 @@ filetype plugin indent on
 " map leader to space
 let g:mapleader=" "
 
-" remap <leader>s to save
+" <leader>s to save
 nnoremap <leader>s :update<CR>
 vnoremap <leader>s <Esc>:update<CR>
 
-" temporarily close and save Vim with <leader>q
+" <leader>x to close pane
+nnoremap <leader>x :x<CR>
+vnoremap <leader>x <Esc>:x<CR>
+ 
+" temporarily hide Vim with <leader>q
 " reopen in command line w/ fg
 noremap <leader>q <C-z>
 
-" remap ctrl-c to esc
+" ctrl-c to esc
 inoremap <C-c> <Esc><Esc>
 
-" remap Esc to jk/kj
+" Esc to jk/kj
 inoremap jk <ESC>
 inoremap kj <ESC>
 
-" set path for fzf
+" fzf
 set rtp+=~/.fzf
-
-" remap fzf to always use GitFiles when searching
 nnoremap <c-t> :GFiles<CR>
+nnoremap <leader>p :GFiles<CR>
 
 " simplify moving between splits
 nnoremap <C-J> <C-W><C-J>
@@ -83,10 +86,13 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " map == to toggle fullscreen active window
-nnoremap <silent>== :MaximizerToggle<CR>
+nnoremap <Leader>m :MaximizerToggle<CR>
 
 " vv to generate new vertical split
 nnoremap <silent> vv <C-w>v
+
+" hh to generate new horizontal split
+nnoremap <silent> hh <C-w>S
 
 " change default split open direction
 set splitbelow
