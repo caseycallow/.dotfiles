@@ -80,7 +80,7 @@ inoremap kj <ESC>
 " fzf
 set rtp+=~/.fzf
 nnoremap <c-t> :GFiles<CR>
-nnoremap <leader>p :GFiles<CR>
+nnoremap <leader>f :GFiles<CR>
 
 " simplify moving between splits
 nnoremap <C-J> <C-W><C-J>
