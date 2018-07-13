@@ -208,7 +208,6 @@ let g:gitgutter_sign_removed_first_line = '•'
 " fugitive mappings
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>gds :Gdiff --cached<CR>
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>ga :Git add -p<CR>
 nmap <Leader>gc :Gcommit<CR>
