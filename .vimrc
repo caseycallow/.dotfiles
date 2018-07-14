@@ -209,7 +209,7 @@ let g:gitgutter_sign_removed_first_line = '•'
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gb :Gblame<CR>
-nmap <Leader>ga :Git add -p<CR>
+nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gc :Gcommit<CR>
 nmap <Leader>go :Git checkout
 
