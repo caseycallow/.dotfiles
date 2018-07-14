@@ -211,6 +211,7 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gr :Gread<CR>
 nmap <Leader>go :Git checkout
 
 " VimCompletesMe config
