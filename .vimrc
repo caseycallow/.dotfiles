@@ -65,7 +65,10 @@ vnoremap <leader>s <Esc>:update<CR>
 " <leader>x to close pane
 nnoremap <leader>x :x<CR>
 vnoremap <leader>x <Esc>:x<CR>
- 
+
+" open terminal
+nnoremap <leader>t :terminal<CR>
+
 " temporarily hide Vim with <leader>q
 " reopen in command line w/ fg
 noremap <leader>q <C-z>
