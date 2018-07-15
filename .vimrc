@@ -51,6 +51,9 @@ Plugin 'ajh17/VimCompletesMe'
 " fugitive
 Plugin 'tpope/vim-fugitive'
 
+" highlight yanked text
+Plugin 'machakann/vim-highlightedyank'
+
 " all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -79,6 +82,8 @@ inoremap <C-c> <Esc><Esc>
 " Esc to jk/kj
 inoremap jk <ESC>
 inoremap kj <ESC>
+tnoremap jk <C-W>N
+tnoremap kj <C-W>N
 
 " fzf
 set rtp+=~/.fzf
