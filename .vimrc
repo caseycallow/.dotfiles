@@ -100,7 +100,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <Leader>m :MaximizerToggle<CR>
 
 " vv to generate new vertical split
-nnoremap <silent> vv <C-w>v
+nnoremap <silent> vv :Sex!<CR>
+
+" jump to current working directory
+nnoremap <silent> - :e .<CR>
 
 " change default split open direction
 set splitbelow
