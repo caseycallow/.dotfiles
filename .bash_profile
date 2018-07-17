@@ -40,6 +40,8 @@ alias gb='git branch'                       # Git branch
 alias gd='git diff'                         # Git diff
 alias gds='git diff --cached'               # Git diff only staged files
 alias go='git checkout'                     # Git checkout
+alias gp='git pull'                         # Git pull
+alias gph='git push'                        # Git push
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit' # Git log
 
 # Project Shortcuts
