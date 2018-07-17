@@ -175,9 +175,6 @@ let g:netrw_banner=0
 let g:netrw_liststyle=4
 let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
 
-" remap ctrl-c to esc
-inoremap <C-c> <Esc><Esc>
-
 " lightline config
 set laststatus=2
 set noshowmode
