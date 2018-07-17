@@ -2,56 +2,25 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
-" set the runtime path to include Vundle and initialize
+" set runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle
+" plugins
 Plugin 'VundleVim/Vundle.vim'
-
-" one dark theme
 Plugin 'rakr/vim-one'
-
-" languages syntax
 Plugin 'sheerun/vim-polyglot'
-
-" auto pairs
 Plugin 'jiangmiao/auto-pairs'
-
-" tab line
 Plugin 'itchyny/lightline.vim'
-
-" git branch
 Plugin 'itchyny/vim-gitbranch'
-
-" emmet
-Plugin 'mattn/emmet-vim'
-
-" css color
 Plugin 'ap/vim-css-color'
-
-" comment toggle
 Plugin 'tomtom/tcomment_vim'
-
-" neoformat
 Plugin 'sbdchd/neoformat'
-
-" fuzzy find
 Plugin 'junegunn/fzf.vim'
-
-" git gutter
 Plugin 'airblade/vim-gitgutter'
-
-" vim maximizer
 Plugin 'szw/vim-maximizer'
-
-" autocomplete
 Plugin 'ajh17/VimCompletesMe'
-
-" fugitive
 Plugin 'tpope/vim-fugitive'
-
-" highlight yanked text
 Plugin 'machakann/vim-highlightedyank'
 
 " all plugins must be added before the following line
@@ -61,19 +30,18 @@ filetype plugin indent on
 " map leader to space
 let g:mapleader=" "
 
-" <leader>s to save
+" save
 nnoremap <leader>s :update<CR>
 vnoremap <leader>s <Esc>:update<CR>
 
-" <leader>x to close pane
+" close pane
 nnoremap <leader>x :x<CR>
 vnoremap <leader>x <Esc>:x<CR>
 
 " open terminal
 nnoremap <silent> <leader>t :terminal<CR>source $HOME/.bash_profile<CR>c<CR>
 
-" temporarily hide Vim with <leader>q
-" reopen in command line w/ fg
+" push vim to bg
 noremap <leader>q <C-z>
 
 " ctrl-c to esc
@@ -96,7 +64,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" map == to toggle fullscreen active window
+" toggle fullscreen active window
 nnoremap <silent> <Leader>m :MaximizerToggle<CR>
 
 " vv to generate new vertical split
@@ -195,9 +163,6 @@ let g:lightline = {
   \   'gitbranch': 'gitbranch#name'
   \ }
   \ }
-
-" emmet config
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Neoformat config
 augroup fmt
