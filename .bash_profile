@@ -41,10 +41,6 @@ alias gds='git diff --cached'               # Git diff only staged files
 alias go='git checkout'                     # Git checkout
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit' # Git log
 
-#   lr:  Full Recursive Directory Listing
-#   ------------------------------------------
-alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
-
 # Project Shortcuts
 alias vds='cd ~/projects/veritas-design-system && vim .'
 alias dot='cd ~/.dotfiles && vim .'
