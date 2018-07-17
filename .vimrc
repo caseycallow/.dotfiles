@@ -97,7 +97,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " map == to toggle fullscreen active window
-nnoremap <Leader>m :MaximizerToggle<CR>
+nnoremap <silent> <Leader>m :MaximizerToggle<CR>
 
 " vv to generate new vertical split
 nnoremap <silent> vv :Sex!<CR>
