@@ -70,7 +70,7 @@ nnoremap <leader>x :x<CR>
 vnoremap <leader>x <Esc>:x<CR>
 
 " open terminal
-nnoremap <leader>t :terminal<CR>source $HOME/.bash_profile<CR>c<CR>
+nnoremap <silent> <leader>t :terminal<CR>source $HOME/.bash_profile<CR>c<CR>
 
 " temporarily hide Vim with <leader>q
 " reopen in command line w/ fg
