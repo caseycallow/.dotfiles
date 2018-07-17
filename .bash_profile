@@ -28,6 +28,7 @@ alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias f='open -a Finder ./'                 # Opens current directory in MacOS Finder
 alias c='clear'                             # Clear terminal display
+alias v='vim .'                             # Open Vim shortcut
 
 # Git Commands
 # ------------------------------------------------------------
