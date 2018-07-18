@@ -34,6 +34,9 @@ let g:mapleader=" "
 nnoremap <leader>s :update<CR>
 vnoremap <leader>s <Esc>:update<CR>
 
+" jump to search
+nnoremap <leader>j /
+
 " close pane
 nnoremap <leader>x :x<CR>
 vnoremap <leader>x <Esc>:x<CR>
