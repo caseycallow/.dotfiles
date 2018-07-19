@@ -31,8 +31,8 @@ filetype plugin indent on
 let g:mapleader=" "
 
 " save
-nnoremap <leader>s :update<CR>
-vnoremap <leader>s <Esc>:update<CR>
+nnoremap <silent> <leader>s :update<CR>
+vnoremap <silent> <leader>s <Esc>:update<CR>
 
 " jump to search
 nnoremap <leader>j /
