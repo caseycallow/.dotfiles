@@ -47,14 +47,3 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 # Project Shortcuts
 alias vds='cd ~/projects/veritas-design-system && vim .'
 alias dot='cd ~/.dotfiles && vim .'
-
-# Tiny Care Terminal
-export TTC_BOTS="vimtips,selfcare_bot,DalaiLama"
-export TTC_WEATHER="94040"
-export TTC_CELSIUS=false
-export TTC_REPOS="/Users/casey/projects/veritas-design-system"
-export TTC_APIKEYS=false
-export TTC_TERMINAL_TITLE=false
-
-# open on Terminal start
-tiny-care-terminal
