@@ -22,6 +22,7 @@ Plugin 'szw/vim-maximizer'
 Plugin 'ajh17/VimCompletesMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'machakann/vim-highlightedyank'
+Plugin 'tpope/vim-surround'
 
 " all plugins must be added before the following line
 call vundle#end()
