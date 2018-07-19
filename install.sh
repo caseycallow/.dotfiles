@@ -18,4 +18,7 @@ vim +PluginInstall +qall
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+# install tiny-care-terminal
+npm install -g tiny-care-terminal
+
 echo Environment configured successfully ✔
