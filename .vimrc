@@ -90,6 +90,9 @@ set splitright
 map ; :
 noremap ;; ;
 
+" enable backspace to work as expected
+set backspace=indent,eol,start
+
 " enable ruler and line numbers
 set ruler
 set number
