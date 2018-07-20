@@ -42,6 +42,7 @@ alias gds='git diff --cached'               # Git diff only staged files
 alias go='git checkout'                     # Git checkout
 alias gp='git pull'                         # Git pull
 alias gpp='git push'                        # Git push
+alias gppx='git push && exit'               # Git push and exit terminal
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit' # Git log
 
 # Project Shortcuts
