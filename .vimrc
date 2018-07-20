@@ -23,6 +23,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
 Plugin 'lifepillar/vim-mucomplete'
 
 " all plugins must be added before the following line
