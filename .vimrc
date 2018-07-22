@@ -34,21 +34,21 @@ filetype plugin indent on
 let g:mapleader=" "
 
 " source .vimrc
-nnoremap <leader>v :so ~/.vimrc<CR>
+nnoremap <leader>v :so ~/.vimrc<cr>
 
 " save
-nnoremap <silent> <leader>s :update<CR>
-vnoremap <silent> <leader>s <Esc>:update<CR>
+nnoremap <silent> <leader>s :update<cr>
+vnoremap <silent> <leader>s <Esc>:update<cr>
 
 " jump to search
 nnoremap <leader>j /
 
 " close pane
-nnoremap <leader>x :x<CR>
-vnoremap <leader>x <Esc>:x<CR>
+nnoremap <leader>x :x<cr>
+vnoremap <leader>x <Esc>:x<cr>
 
 " open terminal
-nnoremap <silent> <leader>t :terminal<CR>source $HOME/.bash_profile<CR>c<CR>
+nnoremap <silent> <leader>t :terminal<cr>source $HOME/.bash_profile<cr>c<cr>
 
 " push vim to bg
 noremap <leader>q <C-z>
@@ -64,7 +64,7 @@ tnoremap kj <C-W>N
 
 " fzf
 set rtp+=~/.fzf
-nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>f :GFiles<cr>
 let g:fzf_layout = { 'window': '10split enew' }
 
 " simplify moving between splits
@@ -74,13 +74,17 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " toggle fullscreen active window
-nnoremap <silent> <Leader>m :MaximizerToggle<CR>
+nnoremap <silent> <Leader>m :MaximizerToggle<cr>
 
 " vv to generate new vertical split
-nnoremap <silent> vv :Sex!<CR>
+nnoremap <silent> vv :Sex!<cr>
 
 " jump to current working directory
-nnoremap <silent> - :e .<CR>
+nnoremap <silent> - :e .<cr>
+
+" macros to Q
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
 
 " change default split open direction
 set splitbelow
@@ -191,12 +195,12 @@ let g:gitgutter_sign_modified_removed = '•'
 let g:gitgutter_sign_removed_first_line = '•'
 
 " fugitive mappings
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>gb :Gblame<CR>
-nmap <Leader>ga :Git add %<CR>
-nmap <Leader>gc :Gcommit<CR>
-nmap <Leader>gr :Gread<CR>
+nmap <Leader>gs :Gstatus<cr>
+nmap <Leader>gd :Gdiff<cr>
+nmap <Leader>gb :Gblame<cr>
+nmap <Leader>ga :Git add %<cr>
+nmap <Leader>gc :Gcommit<cr>
+nmap <Leader>gr :Gread<cr>
 nmap <Leader>go :Git checkout
 
 " MUComplete config
