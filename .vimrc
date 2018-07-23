@@ -48,7 +48,7 @@ nnoremap <leader>x :x<cr>
 vnoremap <leader>x <Esc>:x<cr>
 
 " open terminal
-nnoremap <silent> <leader>t :terminal<cr>source $HOME/.bash_profile<cr>c<cr>
+nnoremap <silent> <leader>t :terminal ++rows=15<cr>source $HOME/.bash_profile<cr>c<cr>
 
 " push vim to bg
 noremap <leader>q <C-z>
