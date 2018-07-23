@@ -154,6 +154,9 @@ autocmd InsertEnter,InsertLeave * set nocul!
 set autoindent
 set smartindent
 
+" clone paragraph
+noremap cp yap<S-}>p
+
 " nicer netrw
 let g:netrw_banner=0
 let g:netrw_liststyle=4
