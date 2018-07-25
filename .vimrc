@@ -24,7 +24,6 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
-Plugin 'lifepillar/vim-mucomplete'
 
 " all plugins must be added before the following line
 call vundle#end()
@@ -205,19 +204,3 @@ nmap <Leader>ga :Git add %<cr>
 nmap <Leader>gc :Gcommit<cr>
 nmap <Leader>gr :Gread<cr>
 nmap <Leader>go :Git checkout
-
-" MUComplete config
-set completeopt+=menuone
-set completeopt+=noselect
-set shortmess+=c
-set belloff+=ctrlg
-let g:mucomplete#enable_auto_at_startup = 1
-imap <c-j> <plug>(MUcompleteFwd)
-imap <c-k> <plug>(MUcompleteBwd)
-let g:AutoPairsMapCR = 0
-imap <Plug>MyCR <Plug>(MUcompleteCR)<Plug>AutoPairsReturn
-imap <cr> <Plug>MyCR
-let g:AutoPairsMapSpace = 0
-imap <silent> <expr> <space> pumvisible()
-      \ ? "<space>"
-      \ : "<c-r>=AutoPairsSpace()<cr>"
