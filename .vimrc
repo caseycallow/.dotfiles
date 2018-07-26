@@ -32,8 +32,8 @@ filetype plugin indent on
 " map leader to space
 let g:mapleader=" "
 
-" source .vimrc
-nnoremap <leader>v :so ~/.vimrc<cr>
+" reload .vimrc
+nnoremap <leader>r :so ~/.vimrc<cr>
 
 " save
 nnoremap <silent> <leader>s :update<cr>
