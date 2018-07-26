@@ -46,6 +46,14 @@ nnoremap <leader>j /
 nnoremap <leader>x :x<cr>
 vnoremap <leader>x <Esc>:x<cr>
 
+" new vertical split
+nnoremap <leader>v :Sex!<cr>
+vnoremap <leader>v <Esc>:Sex!<cr>
+
+" new horizontal split
+nnoremap <leader>h :Hex<cr>
+vnoremap <leader>h <Esc>:Hex<cr>
+
 " open terminal
 nnoremap <silent> <leader>t :terminal ++rows=15<cr>source $HOME/.bash_profile<cr>c<cr>
 
@@ -74,9 +82,6 @@ nnoremap <C-H> <C-W><C-H>
 
 " toggle fullscreen active window
 nnoremap <silent> <Leader>m :MaximizerToggle<cr>
-
-" vv to generate new vertical split
-nnoremap <silent> vv :Sex!<cr>
 
 " jump to current working directory
 nnoremap <silent> - :e .<cr>
