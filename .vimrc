@@ -85,6 +85,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" buffer navigation
+nnoremap <C-I> :bp<cr>
+nnoremap <C-O> :bn<cr>
+
 " toggle fullscreen active window
 nnoremap <silent> <Leader>m :MaximizerToggle<cr>
 
