@@ -57,6 +57,10 @@ vnoremap <leader>h <Esc>:Hex<cr>
 " open terminal
 nnoremap <silent> <leader>t :terminal ++rows=15<cr>source $HOME/.bash_profile<cr>c<cr>
 
+" yank to clipboard
+nnoremap <leader>y V"+y
+vnoremap <leader>y "+y
+
 " push vim to bg
 noremap <leader>q <C-z>
 
