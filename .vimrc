@@ -77,7 +77,7 @@ tnoremap kj <C-W>N
 " fzf
 set rtp+=~/.fzf
 nnoremap <leader>f :GFiles<cr>
-let g:fzf_layout = { 'window': '10split enew' }
+let g:fzf_layout = { 'window': '10split' }
 
 " simplify moving between splits
 nnoremap <C-J> <C-W><C-J>
