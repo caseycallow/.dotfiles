@@ -11,7 +11,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'itchyny/lightline.vim'
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'ap/vim-css-color'
 Plugin 'tomtom/tcomment_vim'
@@ -24,6 +23,8 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " all plugins must be added before the following line
 call vundle#end()
@@ -170,27 +171,6 @@ let g:netrw_banner=0
 let g:netrw_liststyle=4
 let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
 
-" lightline config
-set laststatus=2
-set noshowmode
-let g:lightline = {
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-  \ },
-  \ 'component': {
-  \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-  \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-  \ },
-  \ 'component_visible_condition': {
-  \   'readonly': '(&filetype!="help"&& &readonly)',
-  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
-  \ },
-  \ 'component_function': {
-  \   'gitbranch': 'gitbranch#name'
-  \ }
-  \ }
-
 " Neoformat config
 augroup fmt
   autocmd!
@@ -213,3 +193,7 @@ nmap <Leader>ga :Git add %<cr>
 nmap <Leader>gc :Gcommit<cr>
 nmap <Leader>gr :Gread<cr>
 nmap <Leader>go :Git checkout
+
+" airline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
