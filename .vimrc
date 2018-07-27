@@ -11,13 +11,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'ap/vim-css-color'
 Plugin 'sbdchd/neoformat'
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'szw/vim-maximizer'
-Plugin 'tpope/vim-fugitive'
 Plugin 'machakann/vim-highlightedyank'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
@@ -25,6 +24,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'zirrostig/vim-schlepp'
+Plugin 'mattn/emmet-vim'
 
 " all plugins must be added before the following line
 call vundle#end()
@@ -206,3 +206,6 @@ vmap K <Plug>SchleppUp
 vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
 vmap L <Plug>SchleppRight
+
+" emmet config
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
