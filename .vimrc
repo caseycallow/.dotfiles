@@ -11,7 +11,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'itchyny/vim-gitbranch'
 Plugin 'ap/vim-css-color'
 Plugin 'sbdchd/neoformat'
 Plugin 'junegunn/fzf.vim'
@@ -179,7 +178,7 @@ augroup fmt
 augroup END
 
 " git gutter config
-set updatetime=100
+set updatetime=50
 let g:gitgutter_sign_added = '•'
 let g:gitgutter_sign_modified = '•'
 let g:gitgutter_sign_removed = '•'
@@ -203,7 +202,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme="powerlineish"
 
 " schlepp config
-vmap <unique> K <Plug>SchleppUp
-vmap <unique> J <Plug>SchleppDown
-vmap <unique> H <Plug>SchleppLeft
-vmap <unique> L <Plug>SchleppRight
+vmap K <Plug>SchleppUp
+vmap J <Plug>SchleppDown
+vmap H <Plug>SchleppLeft
+vmap L <Plug>SchleppRight
