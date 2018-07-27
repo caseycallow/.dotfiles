@@ -90,6 +90,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-I> :bp<cr>
 nnoremap <C-O> :bn<cr>
 
+" time travel through recent positions
+nnoremap H <C-O>
+nnoremap L <C-I>
+
 " toggle fullscreen active window
 nnoremap <silent> <Leader>m :MaximizerToggle<cr>
 
