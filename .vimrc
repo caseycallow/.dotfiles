@@ -26,6 +26,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'zirrostig/vim-schlepp'
 
 " all plugins must be added before the following line
 call vundle#end()
@@ -143,9 +144,6 @@ set ignorecase
 " highlight dynamically as pattern is typed
 set incsearch
 
-" highlight all matches
-set hlsearch
-
 " show the filename in the window titlebar
 set title
 
@@ -204,3 +202,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme="powerlineish"
+
+" schlepp config
+vmap <unique> K <Plug>SchleppUp
+vmap <unique> J <Plug>SchleppDown
+vmap <unique> H <Plug>SchleppLeft
+vmap <unique> L <Plug>SchleppRight
