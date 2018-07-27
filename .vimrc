@@ -143,6 +143,9 @@ set ignorecase
 " highlight dynamically as pattern is typed
 set incsearch
 
+" highlight all matches
+set hlsearch
+
 " show the filename in the window titlebar
 set title
 
