@@ -23,6 +23,7 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -91,9 +92,6 @@ nnoremap <C-O> :bn<cr>
 
 " toggle fullscreen active window
 nnoremap <silent> <Leader>m :MaximizerToggle<cr>
-
-" jump to current working directory
-nnoremap <silent> - :e .<cr>
 
 " macros to Q
 nnoremap Q @q
@@ -169,11 +167,6 @@ set smartindent
 
 " clone paragraph
 noremap cp yap<S-}>p
-
-" nicer netrw
-let g:netrw_banner=0
-let g:netrw_liststyle=4
-let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
 
 " Neoformat config
 augroup fmt
