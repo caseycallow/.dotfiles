@@ -2,6 +2,10 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
+" --------------------------------------------------
+" ------------------- PLUGINS ----------------------
+" --------------------------------------------------
+
 " set runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -26,44 +30,12 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'zirrostig/vim-schlepp'
 Plugin 'mattn/emmet-vim'
 
-" all plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
 
-" map leader to space
-let g:mapleader=" "
-
-" reload .vimrc
-nnoremap <leader>r :so ~/.vimrc<cr>
-
-" save
-nnoremap <silent> <leader>s :update<cr>
-vnoremap <silent> <leader>s <Esc>:update<cr>
-
-" jump to search
-nnoremap <leader>j /
-
-" close pane
-nnoremap <leader>x :x<cr>
-vnoremap <leader>x <Esc>:x<cr>
-
-" new vertical split
-nnoremap <leader>v :Sex!<cr>
-vnoremap <leader>v <Esc>:Sex!<cr>
-
-" new horizontal split
-nnoremap <leader>h :Hex<cr>
-vnoremap <leader>h <Esc>:Hex<cr>
-
-" open terminal
-nnoremap <silent> <leader>t :terminal ++rows=15<cr>source $HOME/.bash_profile<cr>c<cr>
-
-" yank to clipboard
-nnoremap <leader>y V"+y
-vnoremap <leader>y "+y
-
-" push vim to bg
-noremap <leader>q <C-z>
+" --------------------------------------------------
+" ------------------- ALIASES ----------------------
+" --------------------------------------------------
 
 " ctrl-c to esc
 inoremap <C-c> <Esc><Esc>
@@ -73,11 +45,6 @@ inoremap jk <ESC>
 inoremap kj <ESC>
 tnoremap jk <C-W>N
 tnoremap kj <C-W>N
-
-" fzf
-set rtp+=~/.fzf
-nnoremap <leader>f :GFiles<cr>
-let g:fzf_layout = { 'window': '10split' }
 
 " simplify moving between splits
 nnoremap <C-J> <C-W><C-J>
@@ -100,92 +67,95 @@ nnoremap <silent> <Leader>m :MaximizerToggle<cr>
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
-" change default split open direction
-set splitbelow
-set splitright
+" clone paragraph
+noremap cp yap<S-}>p
 
 " remap ; to :
-" hit ; twice if ; is needed
 map ; :
 noremap ;; ;
 
-" enable backspace to work as expected
-set backspace=indent,eol,start
+" --------------------------------------------------
+" -------------------- THEME -----------------------
+" --------------------------------------------------
 
-" enable ruler and line numbers
-set ruler
-set number
-
-" refresh changed content of opened file when cursor stops moving
-set autoread
-
-" color scheme
 colorscheme one
 set background=dark
 syntax enable
 hi! Normal ctermbg=NONE guibg=NONE
 highlight Pmenu ctermbg=238 gui=bold
 
-" soft tabs
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
+" --------------------------------------------------
+" ------------------- OPTIONS ----------------------
+" --------------------------------------------------
 
-" store temporary files in separate folder
-set swapfile
-set dir=/tmp
-
-" ignore case of searches
-set ignorecase
-
-" highlight dynamically as pattern is typed
-set incsearch
-
-" show the filename in the window titlebar
-set title
-
-" show the (partial) command as it’s being typed
-set showcmd
-
-" prevent line wrapping
-set nowrap
-
-" don’t reset cursor to start of line when moving around
-set nostartofline
-
-" start scrolling three lines before the horizontal window border
-set scrolloff=3
-
-" mouse control
-set mouse=a
-
-" disable cursorline in insert mode
+set autoindent
+set autoread
+set backspace=indent,eol,start
 set cul
+set dir=/tmp
+set expandtab
+set ignorecase
+set incsearch
+set mouse=a
+set nostartofline
+set nowrap
+set number
+set ruler
+set scrolloff=3
+set shiftwidth=2
+set showcmd
+set smartindent
+set softtabstop=2
+set splitbelow
+set splitright
+set swapfile
+set tabstop=2
+set title
 autocmd InsertEnter,InsertLeave * set nocul!
 
-" open {} and () when enter pressed
-set autoindent
-set smartindent
+" --------------------------------------------------
+" ----------------- LEADER MAPS --------------------
+" --------------------------------------------------
 
-" clone paragraph
-noremap cp yap<S-}>p
+" map leader to space
+let g:mapleader=' '
 
-" Neoformat config
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | endtry
-augroup END
+" save
+nnoremap <silent> <leader>s :update<cr>
+vnoremap <silent> <leader>s <Esc>:update<cr>
 
-" git gutter config
-set updatetime=50
-let g:gitgutter_sign_added = '•'
-let g:gitgutter_sign_modified = '•'
-let g:gitgutter_sign_removed = '•'
-let g:gitgutter_sign_modified_removed = '•'
-let g:gitgutter_sign_removed_first_line = '•'
+" fzf
+nnoremap <leader>f :GFiles<cr>
 
-" fugitive mappings
+" reload vim
+nnoremap <leader>r :so ~/.vimrc<cr>
+
+" jump to search
+nnoremap <leader>j /
+
+" vertical split
+nnoremap <leader>v :Sex!<cr>
+vnoremap <leader>v <Esc>:Sex!<cr>
+
+" horizontal split
+nnoremap <leader>h :Hex<cr>
+vnoremap <leader>h <Esc>:Hex<cr>
+
+" close pane
+nnoremap <leader>x :x<cr>
+vnoremap <leader>x <Esc>:x<cr>
+
+" push vim to bg
+noremap <leader>q <C-z>
+
+" open terminal
+nnoremap <silent> <leader>t :terminal ++rows=15<cr>source $HOME/.bash_profile<cr>c<cr>
+
+" yank to system clipboard
+nnoremap <leader>y V"+y
+vnoremap <leader>y "+y
+
+" fugitive
 nmap <Leader>gs :Gstatus<cr>
 nmap <Leader>gd :Gdiff<cr>
 nmap <Leader>gb :Gblame<cr>
@@ -194,18 +164,40 @@ nmap <Leader>gc :Gcommit<cr>
 nmap <Leader>gr :Gread<cr>
 nmap <Leader>go :Git checkout
 
-" airline config
+" --------------------------------------------------
+" ----------------- PLUGIN CONFIG ------------------
+" --------------------------------------------------
+
+" Neoformat
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | endtry
+augroup END
+
+" git gutter
+set updatetime=50
+let g:gitgutter_sign_added = '•'
+let g:gitgutter_sign_modified = '•'
+let g:gitgutter_sign_removed = '•'
+let g:gitgutter_sign_modified_removed = '•'
+let g:gitgutter_sign_removed_first_line = '•'
+
+" airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme="powerlineish"
+let g:airline_theme='powerlineish'
 
-" schlepp config
+" schlepp
 vmap K <Plug>SchleppUp
 vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
 vmap L <Plug>SchleppRight
 
-" emmet config
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" emmet
+imap <expr> <tab>emmet#expandAbbrIntelligent('\<tab>')
+
+" fzf
+set rtp+=~/.fzf
+let g:fzf_layout = { 'window': '10split' }
