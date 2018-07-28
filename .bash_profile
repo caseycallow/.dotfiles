@@ -5,7 +5,10 @@ export EDITOR="$VISUAL"
 # ------------------- PROMPT -----------------------
 # --------------------------------------------------
 
-parse_git_branch() { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' }
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 export PS1="\n\033[33m\]\$(parse_git_branch)\[\033[00m\] \[\e[32m\] ➜ \[\e[0m\]"
 export BLOCKSIZE=1k
 export CLICOLOR=1

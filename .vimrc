@@ -88,8 +88,8 @@ nnoremap L <C-I>
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
 noremap cp yap<S-}>p
-map ; :
-noremap ;; ;
+noremap ; :
+noremap : ;
 
 " --------------------------------------------------
 " ---------------- LEADER MAPPINGS -----------------
