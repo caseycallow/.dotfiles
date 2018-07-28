@@ -132,7 +132,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='powerlineish'
 
 " emmet
-imap <expr> <tab>emmet#expandAbbrIntelligent('\<tab>')
+imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 
 " fzf
 set rtp+=~/.fzf
