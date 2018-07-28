@@ -112,13 +112,13 @@ nnoremap <leader>x :x<cr>
 vnoremap <leader>x <Esc>:x<cr>
 nnoremap <leader>y V"+y
 vnoremap <leader>y "+y
-nmap <Leader>gs :Gstatus<cr>
-nmap <Leader>gd :Gdiff<cr>
-nmap <Leader>gb :Gblame<cr>
-nmap <Leader>ga :Git add %<cr>
-nmap <Leader>gc :Gcommit<cr>
-nmap <Leader>gr :Gread<cr>
-nmap <Leader>go :Git checkout
+nnoremap <Leader>gs :Gstatus<cr>
+nnoremap <Leader>gd :Gdiff<cr>
+nnoremap <Leader>gb :Gblame<cr>
+nnoremap <Leader>ga :Git add %<cr>
+nnoremap <Leader>gc :Gcommit<cr>
+nnoremap <Leader>gr :Gread<cr>
+nnoremap <Leader>go :Git checkout
 
 " --------------------------------------------------
 " ----------------- PLUGIN CONFIG ------------------
@@ -128,7 +128,7 @@ nmap <Leader>go :Git checkout
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline_extensions = ['branch']
+let g:airline_extensions = ['branch', 'tabline']
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='dark'
