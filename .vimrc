@@ -9,23 +9,22 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'rakr/vim-one'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'sbdchd/neoformat'
-Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'szw/vim-maximizer'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'junegunn/fzf.vim'
 Plugin 'machakann/vim-highlightedyank'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'zirrostig/vim-schlepp'
 Plugin 'mattn/emmet-vim'
+Plugin 'rakr/vim-one'
+Plugin 'sbdchd/neoformat'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'szw/vim-maximizer'
+Plugin 'tpope/vim-airline'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
+Plugin 'zirrostig/vim-schlepp'
 call vundle#end()
 filetype plugin indent on
 
@@ -52,6 +51,7 @@ set expandtab
 set ignorecase
 set incsearch
 set mouse=a
+set noshowmode
 set nostartofline
 set nowrap
 set number
@@ -126,10 +126,12 @@ nmap <Leader>go :Git checkout
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme='powerlineish'
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline_extensions = ['branch']
+let g:airline_highlighting_cache = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
 
 " emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
