@@ -140,7 +140,7 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_extensions = ['branch', 'tabline']
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='dark'
+let g:airline_theme='one'
 
 " autosave
 let g:auto_save = 1
