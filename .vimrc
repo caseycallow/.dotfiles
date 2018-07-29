@@ -8,11 +8,12 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
 Plugin '907th/vim-auto-save'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf.vim'
+Plugin 'justinmk/vim-sneak'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'mattn/emmet-vim'
 Plugin 'rakr/vim-one'
@@ -74,51 +75,58 @@ autocmd InsertEnter,InsertLeave * set nocul!
 " --------------------------------------------------
 
 inoremap <C-c> <Esc><Esc>
-inoremap jk <ESC>
-inoremap kj <ESC>
+inoremap jk <Esc>
+inoremap kj <Esc>
 tnoremap jk <C-W>N
 tnoremap kj <C-W>N
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <C-I> :bp<cr>
-nnoremap <C-O> :bn<cr>
+nnoremap <C-I> :bp<CR>
+nnoremap <C-O> :bn<CR>
 nnoremap H <C-O>
 nnoremap L <C-I>
 nnoremap Q @q
-vnoremap Q :norm @q<cr>
+vnoremap Q :norm @q<CR>
 noremap cp yap<S-}>p
 noremap ; :
 noremap : ;
+vmap K <Plug>SchleppUp
+vmap J <Plug>SchleppDown
+vmap H <Plug>SchleppLeft
+vmap L <Plug>SchleppRight
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
+imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 
 " --------------------------------------------------
 " ---------------- LEADER MAPPINGS -----------------
 " --------------------------------------------------
 
 let g:mapleader=' '
-nnoremap <leader>f :GFiles<cr>
-nnoremap <leader>h :Hex<cr>
-vnoremap <leader>h <Esc>:Hex<cr>
+nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>h :Hex<CR>
+vnoremap <leader>h <Esc>:Hex<CR>
 nnoremap <leader>j /
-nnoremap <silent> <leader>m :MaximizerToggle<cr>
+nnoremap <silent> <leader>m :MaximizerToggle<CR>
 nnoremap <leader>q <C-z>
-nnoremap <leader>r :so ~/.vimrc<cr>
-nnoremap <silent> <leader>s :update<cr>
-vnoremap <silent> <leader>s <Esc>:update<cr>
-nnoremap <silent> <leader>t :terminal ++rows=15<cr>source $HOME/.bash_profile<cr>c<cr>
-nnoremap <leader>v :Sex!<cr>
-vnoremap <leader>v <Esc>:Sex!<cr>
-nnoremap <leader>x :x<cr>
-vnoremap <leader>x <Esc>:x<cr>
+nnoremap <leader>r :so ~/.vimrc<CR>
+nnoremap <silent> <leader>s :update<CR>
+vnoremap <silent> <leader>s <Esc>:update<CR>
+nnoremap <silent> <leader>t :terminal ++rows=15<CR>source $HOME/.bash_profile<CR>c<CR>
+nnoremap <leader>v :Sex!<CR>
+vnoremap <leader>v <Esc>:Sex!<CR>
+nnoremap <leader>x :x<CR>
+vnoremap <leader>x <Esc>:x<CR>
 nnoremap <leader>y V"+y
 vnoremap <leader>y "+y
-nnoremap <Leader>gs :Gstatus<cr>
-nnoremap <Leader>gd :Gdiff<cr>
-nnoremap <Leader>gb :Gblame<cr>
-nnoremap <Leader>ga :Git add %<cr>
-nnoremap <Leader>gc :Gcommit<cr>
-nnoremap <Leader>gr :Gread<cr>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>ga :Git add %<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>go :Git checkout
 
 " --------------------------------------------------
@@ -134,8 +142,9 @@ let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='dark'
 
-" emmet
-imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
+" autosave
+let g:auto_save = 1
+let g:auto_save_silent = 1
 
 " fzf
 set rtp+=~/.fzf
@@ -155,11 +164,5 @@ augroup fmt
   autocmd BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | endtry
 augroup END
 
-" schlepp
-vmap K <Plug>SchleppUp
-vmap J <Plug>SchleppDown
-vmap H <Plug>SchleppLeft
-vmap L <Plug>SchleppRight
-
-" autosave
-let g:auto_save = 1
+" sneak
+let g:sneak#s_next = 1
