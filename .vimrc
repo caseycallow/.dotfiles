@@ -48,6 +48,7 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set cul
+set diffopt=vertical
 set dir=/tmp
 set expandtab
 set ignorecase
