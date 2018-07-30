@@ -97,8 +97,6 @@ vmap K <Plug>SchleppUp
 vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
 vmap L <Plug>SchleppRight
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
 imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 
 " --------------------------------------------------
