@@ -47,6 +47,7 @@ highlight Pmenu ctermbg=238 gui=bold
 set autoindent
 set autoread
 set backspace=indent,eol,start
+set copyindent
 set cul
 set diffopt=vertical
 set dir=/tmp
@@ -54,19 +55,24 @@ set expandtab
 set ignorecase
 set incsearch
 set mouse=a
+set nobackup
 set noshowmode
 set nostartofline
+set noswapfile
 set nowrap
 set number
 set ruler
 set scrolloff=3
+set shiftround
 set shiftwidth=2
 set showcmd
+set showmatch
+set smartcase
 set smartindent
+set smarttab
 set softtabstop=2
 set splitbelow
 set splitright
-set swapfile
 set tabstop=2
 set title
 autocmd InsertEnter,InsertLeave * set nocul!
