@@ -110,6 +110,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 " --------------------------------------------------
 
 let g:mapleader=' '
+nnoremap <leader>d :bd<CR>
 nnoremap <leader>e :e<CR>
 nnoremap <leader>f :GFiles<CR>
 nnoremap <leader>h :Hex<CR>
