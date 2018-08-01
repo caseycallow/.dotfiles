@@ -52,7 +52,6 @@ set backspace=indent,eol,start
 set copyindent
 set cul
 set diffopt=vertical
-set dir=/tmp
 set expandtab
 set ignorecase
 set incsearch
