@@ -66,7 +66,7 @@ set nowrap
 set number
 set regexpengine=1
 set ruler
-set scrolloff=999
+set scrolloff=4
 set shiftround
 set shiftwidth=2
 set showcmd
