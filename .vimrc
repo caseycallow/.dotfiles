@@ -50,7 +50,6 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set copyindent
-set cul
 set diffopt=vertical
 set expandtab
 set ignorecase
@@ -58,6 +57,7 @@ set incsearch
 set lazyredraw
 set mouse=a
 set nobackup
+set nocursorline
 set noshowmode
 set nostartofline
 set noswapfile
@@ -100,10 +100,12 @@ nnoremap H <C-O>
 nnoremap L <C-I>
 nnoremap Q @q
 vnoremap Q :norm @q<CR>
-noremap cp yap<S-}>p
-noremap cl Yp
+nnoremap cp yap<S-}>p
+nnoremap cl Yp
 noremap ; :
 noremap : ;
+nnoremap j gj
+nnoremap k gk
 vmap K <Plug>SchleppUp
 vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
@@ -140,12 +142,30 @@ nnoremap <Leader>ga :Git add %<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>go :Git checkout
+nnoremap <leader>wm :call ToggleWritingMode()<CR>
 
 " --------------------------------------------------
-" -------------------- COMMANDS --------------------
+" ------------------- FUNCTIONS --------------------
 " --------------------------------------------------
 
-command! WritingMode Limelight!! | :Goyo
+let g:writingmode = 1
+function! ToggleWritingMode()
+  if g:writingmode
+    Limelight
+    Goyo
+    set wrap
+    set linebreak
+    set spell
+    let g:writingmode = 0
+  else
+    Limelight!
+    Goyo!
+    set nowrap
+    set nolinebreak
+    set nospell
+    let g:writingmode = 1
+  endif
+endfunction
 
 " --------------------------------------------------
 " ----------------- PLUGIN CONFIG ------------------
