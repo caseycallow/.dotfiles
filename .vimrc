@@ -99,6 +99,7 @@ nnoremap L <C-I>
 nnoremap Q @q
 vnoremap Q :norm @q<CR>
 noremap cp yap<S-}>p
+noremap cl Yp
 noremap ; :
 noremap : ;
 vmap K <Plug>SchleppUp
