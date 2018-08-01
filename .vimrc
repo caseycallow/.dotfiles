@@ -27,6 +27,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 Plugin 'zirrostig/vim-schlepp'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -137,6 +139,12 @@ nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>go :Git checkout
 
 " --------------------------------------------------
+" -------------------- COMMANDS --------------------
+" --------------------------------------------------
+
+command! WritingMode Limelight!! | :Goyo
+
+" --------------------------------------------------
 " ----------------- PLUGIN CONFIG ------------------
 " --------------------------------------------------
 
@@ -164,6 +172,10 @@ let g:gitgutter_sign_modified = '•'
 let g:gitgutter_sign_removed = '•'
 let g:gitgutter_sign_modified_removed = '•'
 let g:gitgutter_sign_removed_first_line = '•'
+
+" limelight
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
 
 " neoformat
 augroup fmt
