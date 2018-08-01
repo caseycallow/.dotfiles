@@ -64,7 +64,7 @@ set noswapfile
 set nowrap
 set number
 set ruler
-set scrolloff=3
+set scrolloff=999
 set shiftround
 set shiftwidth=2
 set showcmd
