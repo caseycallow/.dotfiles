@@ -62,7 +62,7 @@ set noshowmode
 set nostartofline
 set noswapfile
 set nowrap
-set number
+set number relativenumber
 set regexpengine=1
 set ruler
 set scrolloff=4
