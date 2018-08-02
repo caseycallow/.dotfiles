@@ -13,9 +13,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'mattn/emmet-vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'rakr/vim-one'
 Plugin 'sbdchd/neoformat'
 Plugin 'sheerun/vim-polyglot'
@@ -27,8 +30,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 Plugin 'zirrostig/vim-schlepp'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -119,6 +120,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 " --------------------------------------------------
 
 let g:mapleader=' '
+nnoremap <leader>a :Ack 
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>e :e<CR>
 nnoremap <leader>f :GFiles<CR>
@@ -168,6 +170,9 @@ endfunction
 " --------------------------------------------------
 " ----------------- PLUGIN CONFIG ------------------
 " --------------------------------------------------
+
+" ack
+let g:ackhighlight = 1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
