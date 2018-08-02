@@ -153,16 +153,12 @@ function! ToggleWritingMode()
   if g:writingmode
     Limelight
     Goyo
-    set wrap
-    set linebreak
-    set spell
+    set wrap linebreak spell
     let g:writingmode = 0
   else
     Limelight!
     Goyo!
-    set nowrap
-    set nolinebreak
-    set nospell
+    set nowrap nolinebreak nospell
     let g:writingmode = 1
   endif
 endfunction
