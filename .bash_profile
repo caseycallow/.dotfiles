@@ -48,6 +48,7 @@ alias go='git checkout'
 alias gp='git pull'
 alias gpp='git push'
 alias gppx='git push && exit'
+alias gpu='git push -u origin `git symbolic-ref --short HEAD`'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # --------------------------------------------------
