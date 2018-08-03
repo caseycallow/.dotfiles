@@ -8,7 +8,6 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin '907th/vim-auto-save'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
@@ -182,10 +181,6 @@ let g:airline_extensions = ['branch', 'tabline']
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='one'
-
-" autosave
-let g:auto_save = 1
-let g:auto_save_silent = 1
 
 " fzf
 set rtp+=~/.fzf
