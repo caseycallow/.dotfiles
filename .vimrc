@@ -39,7 +39,6 @@ filetype plugin indent on
 colorscheme one
 set background=dark
 syntax enable
-hi Normal ctermbg=NONE guibg=NONE
 hi CursorLineNr ctermbg=NONE guibg=NONE
 hi Pmenu ctermbg=238 gui=bold
 
