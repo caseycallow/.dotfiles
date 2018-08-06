@@ -52,6 +52,7 @@ set backspace=indent,eol,start
 set copyindent
 set diffopt=vertical
 set expandtab
+set hlsearch
 set ignorecase
 set incsearch
 set lazyredraw
@@ -111,6 +112,8 @@ noremap ; :
 noremap : ;
 nnoremap j gj
 nnoremap k gk
+nnoremap n nzz
+nnoremap N Nzz
 vmap K <Plug>SchleppUp
 vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
@@ -122,6 +125,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
 " --------------------------------------------------
 
 let g:mapleader=' '
+noremap <silent> <leader><CR> :noh<CR>
 nnoremap <leader>a :Ack 
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>e :e<CR>
