@@ -110,8 +110,6 @@ noremap B ^
 noremap E $
 nnoremap j gj
 nnoremap k gk
-nnoremap n nzz
-nnoremap N Nzz
 vmap K <Plug>SchleppUp
 vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
