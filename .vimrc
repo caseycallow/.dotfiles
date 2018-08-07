@@ -87,10 +87,6 @@ set ttyfast
 " ------------------ MAPPINGS ----------------------
 " --------------------------------------------------
 
-nnoremap B ^
-nnoremap E $
-vnoremap B ^
-vnoremap E $
 inoremap <C-c> <Esc><Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -110,6 +106,8 @@ nnoremap cp yap<S-}>p
 nnoremap cl Yp
 noremap ; :
 noremap : ;
+noremap B ^
+noremap E $
 nnoremap j gj
 nnoremap k gk
 nnoremap n nzz
