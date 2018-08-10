@@ -41,6 +41,7 @@ set background=dark
 syntax enable
 hi CursorLineNr ctermbg=NONE guibg=NONE
 hi Pmenu ctermbg=238 gui=bold
+hi link Sneak Normal
 
 " --------------------------------------------------
 " ------------------- OPTIONS ----------------------
@@ -114,6 +115,10 @@ vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
 vmap L <Plug>SchleppRight
 imap <expr> <tab> emmet#expandAbbrIntelligent('\<tab>')
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
 " --------------------------------------------------
 " ---------------- LEADER MAPPINGS -----------------
