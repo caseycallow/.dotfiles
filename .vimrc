@@ -189,6 +189,13 @@ let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='one'
 
+" emmet
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
+
 " fzf
 set rtp+=~/.fzf
 let g:fzf_layout = { 'window': '10split' }
