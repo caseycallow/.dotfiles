@@ -18,8 +18,8 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'prettier/vim-prettier'
 Plugin 'rakr/vim-one'
-Plugin 'sbdchd/neoformat'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'szw/vim-maximizer'
 Plugin 'tpope/vim-airline'
@@ -205,11 +205,17 @@ let g:gitgutter_sign_removed_first_line = '•'
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
-" neoformat
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | endtry
-augroup END
+" prettier
+let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+let g:prettier#quickfix_enabled = 0
+let g:prettier#config#parser = 'babylon'
+let g:prettier#config#single_quote = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.json,*.md PrettierAsync
 
 " sneak
 let g:sneak#s_next = 1
