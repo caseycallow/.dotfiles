@@ -129,7 +129,7 @@ noremap <silent> <leader><CR> :noh<CR>
 nnoremap <leader>a :Ack 
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>e :e<CR>
-nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>f :Files<CR>
 nnoremap <leader>h :Hex<CR>
 vnoremap <leader>h <Esc>:Hex<CR>
 nnoremap <leader>j /
@@ -198,6 +198,7 @@ let g:user_emmet_settings = {
 
 " fzf
 set rtp+=~/.fzf
+let $FZF_DEFAULT_COMMAND= 'git ls-files --exclude-standard --others --cached'
 let g:fzf_layout = { 'window': '10split' }
 
 " gitgutter
