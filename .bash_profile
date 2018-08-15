@@ -57,3 +57,4 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 
 alias vds='cd ~/projects/veritas-design-system && vim .'
 alias dot='cd ~/.dotfiles && vim .'
+alias pro='cd ~/projects'
