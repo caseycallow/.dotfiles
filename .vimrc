@@ -135,7 +135,7 @@ vnoremap <leader>h <Esc>:Hex<CR>
 nnoremap <leader>j /
 nnoremap <silent> <leader>m :MaximizerToggle<CR>
 nnoremap <leader>q <C-z>
-nnoremap <leader>r :so ~/.vimrc<CR>
+nnoremap <leader>r :so $MYVIMRC<CR>
 nnoremap <silent> <leader>s :update<CR>
 vnoremap <silent> <leader>s <Esc>:update<CR>
 nnoremap <silent> <leader>t :terminal ++rows=15<CR>source $HOME/.bash_profile<CR>c<CR>
