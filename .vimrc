@@ -53,7 +53,7 @@ set backspace=indent,eol,start
 set copyindent
 set diffopt=vertical
 set expandtab
-set hlsearch
+set nohlsearch
 set ignorecase
 set incsearch
 set lazyredraw
@@ -125,7 +125,6 @@ map T <Plug>Sneak_T
 " --------------------------------------------------
 
 let g:mapleader=' '
-noremap <silent> <leader><CR> :noh<CR>
 nnoremap <leader>a :Ack 
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>e :e<CR>
