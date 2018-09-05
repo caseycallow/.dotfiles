@@ -137,7 +137,7 @@ nnoremap <leader>q <C-z>
 nnoremap <leader>r :so $MYVIMRC<CR>
 nnoremap <silent> <leader>s :update<CR>
 vnoremap <silent> <leader>s <Esc>:update<CR>
-nnoremap <silent> <leader>t :terminal ++rows=20<CR>source $HOME/.bash_profile<CR>c<CR>
+nnoremap <silent> <leader>t :vertical terminal<CR>source $HOME/.bash_profile<CR>c<CR>
 nnoremap <leader>v :Sex!<CR>
 vnoremap <leader>v <Esc>:Sex!<CR>
 nnoremap <leader>x :x<CR>
