@@ -144,6 +144,7 @@ nnoremap <leader>x :x<CR>
 vnoremap <leader>x <Esc>:x<CR>
 nnoremap <leader>y V"+y
 vnoremap <leader>y "+y
+nnoremap <Leader>cl yiwoconsole.log("<c-r>"", <c-r>");<Esc>^
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
