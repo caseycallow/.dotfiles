@@ -51,6 +51,7 @@ alias gps='git push'
 alias gpsx='git push && exit'
 alias gpu='git push -u origin `git symbolic-ref --short HEAD`'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias gbdr='git fetch -p && for branch in `git branch -vv | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done'
 
 # --------------------------------------------------
 # ------------------ SHORTCUTS ---------------------
