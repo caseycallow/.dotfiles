@@ -63,3 +63,11 @@ alias gbdr='git fetch -p && for branch in `git branch -vv | grep ": gone]" | awk
 alias vds='cd ~/projects/veritas-design-system && vim .'
 alias dot='cd ~/.dotfiles && vim .'
 alias pro='cd ~/projects'
+
+# --------------------------------------------------
+# ------------------- SYSTEM -----------------------
+# --------------------------------------------------
+
+alias sleep='sudo shutdown -s now'
+alias restart='sudo shutdown -r now'
+alias shutdown='sudo shutdown -h now'
