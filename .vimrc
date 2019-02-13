@@ -9,6 +9,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'AndrewRadev/switch.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf.vim'
@@ -127,6 +128,7 @@ map T <Plug>Sneak_T
 
 let g:mapleader=' '
 nnoremap <leader>a :Ack 
+nnoremap <leader>b :Switch<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>e :e<CR>
 nnoremap <leader>f :Files<CR>
