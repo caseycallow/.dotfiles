@@ -55,14 +55,15 @@ set backspace=indent,eol,start
 set copyindent
 set diffopt=vertical
 set expandtab
-set nohlsearch
+set gdefault
 set ignorecase
 set incsearch
 set lazyredraw
 set mouse=a
 set nobackup
-set nocursorline
 set nocursorcolumn
+set nocursorline
+set nohlsearch
 set noshowmode
 set nostartofline
 set noswapfile
@@ -106,6 +107,7 @@ nnoremap Q @q
 vnoremap Q :norm @q<CR>
 nnoremap cp yap<S-}>p
 nnoremap cl Yp
+nnoremap ya mzggVG"+y`z
 noremap ; :
 noremap : ;
 noremap B ^
