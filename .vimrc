@@ -216,13 +216,6 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = 'Ɇ'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" emmet
-let g:user_emmet_settings = {
-\  'javascript.jsx' : {
-\      'extends' : 'jsx',
-\  },
-\}
-
 " fzf
 set rtp+=~/.fzf
 let $FZF_DEFAULT_COMMAND= 'git ls-files --exclude-standard --others --cached'
