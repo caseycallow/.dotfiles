@@ -114,6 +114,8 @@ noremap B ^
 noremap E $
 nnoremap j gj
 nnoremap k gk
+noremap > >>
+noremap < <<
 vmap K <Plug>SchleppUp
 vmap J <Plug>SchleppDown
 vmap H <Plug>SchleppLeft
