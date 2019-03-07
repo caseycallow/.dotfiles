@@ -40,9 +40,12 @@ filetype plugin indent on
 colorscheme one
 set background=dark
 syntax enable
-hi Normal ctermbg=NONE guibg=NONE
-hi CursorLineNr ctermbg=NONE guibg=NONE
-hi Pmenu ctermbg=238 gui=bold
+hi Normal ctermbg=NONE
+hi CursorLineNr ctermbg=NONE
+hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE
+hi PmenuSel ctermfg=NONE ctermbg=20 cterm=NONE
+hi PmenuSbar ctermfg=NONE ctermbg=NONE cterm=NONE
+hi PmenuThumb ctermfg=NONE ctermbg=20 cterm=NONE
 hi link Sneak Normal
 
 " --------------------------------------------------
