@@ -110,7 +110,7 @@ nnoremap Q @q
 vnoremap Q :norm @q<CR>
 nnoremap cp yap<S-}>p
 nnoremap cl Yp
-nnoremap ya mzggVG"+y`z
+nnoremap yf mzggVG"+y`z
 noremap ; :
 noremap : ;
 noremap B ^
