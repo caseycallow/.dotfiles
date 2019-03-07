@@ -194,6 +194,7 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_extensions = ['branch', 'tabline']
 let g:airline_highlighting_cache = 1
 let g:airline_theme = 'one'
+let g:airline_section_b = '%{strftime("%I:%M\%p")}'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
