@@ -214,7 +214,7 @@ let g:airline_symbols.maxlinenr = '㏑'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = 'Ɇ'
+let g:airline_symbols.notexists = ''
 let g:airline_symbols.whitespace = 'Ξ'
 
 " fzf
