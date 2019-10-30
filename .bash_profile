@@ -1,5 +1,6 @@
 export VISUAL=vim
 export EDITOR='$VISUAL'
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # --------------------------------------------------
 # ------------------- PROMPT -----------------------
@@ -60,7 +61,6 @@ alias gbdr='git fetch -p && for branch in `git branch -vv | grep ": gone]" | awk
 # ------------------ SHORTCUTS ---------------------
 # --------------------------------------------------
 
-alias vds='cd ~/projects/veritas-design-system && vim .'
 alias dot='cd ~/.dotfiles && vim .'
 alias pro='cd ~/projects'
 
