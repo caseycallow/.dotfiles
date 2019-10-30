@@ -72,6 +72,7 @@ set nostartofline
 set noswapfile
 set nowrap
 set number relativenumber
+set redrawtime=10000
 set regexpengine=1
 set ruler
 set scrolloff=999
