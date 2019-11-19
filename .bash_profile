@@ -2,6 +2,8 @@ export VISUAL=vim
 export EDITOR='$VISUAL'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+source ~/.bashrc
+
 # --------------------------------------------------
 # ------------------- PROMPT -----------------------
 # --------------------------------------------------
@@ -63,6 +65,7 @@ alias gbdr='git fetch -p && for branch in `git branch -vv | grep ": gone]" | awk
 
 alias dot='cd ~/.dotfiles && vim .'
 alias pro='cd ~/projects'
+alias dc='docker-compose'
 
 # --------------------------------------------------
 # ------------------- SYSTEM -----------------------
