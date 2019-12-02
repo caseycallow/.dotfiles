@@ -1,6 +1,7 @@
 export VISUAL=vim
 export EDITOR='$VISUAL'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 source ~/.bashrc
 
