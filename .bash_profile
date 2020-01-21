@@ -3,8 +3,6 @@ export EDITOR='$VISUAL'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-source ~/.bashrc
-
 # --------------------------------------------------
 # ------------------- PROMPT -----------------------
 # --------------------------------------------------
@@ -43,6 +41,13 @@ alias x='exit'
 # --------------------- GIT ------------------------
 # --------------------------------------------------
 
+function openPR() {
+  github_url=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's%\.git$%%' | awk '/github/'`;
+  branch_name=`git symbolic-ref HEAD | cut -d"/" -f 3,4`;
+  pr_url=$github_url"/compare/develop..."$branch_name;
+  open $pr_url;
+}
+
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
@@ -59,6 +64,7 @@ alias gst='git stash'
 alias gstp='git stash pop'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gbdr='git fetch -p && for branch in `git branch -vv | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done'
+alias gopr='`openPR`'
 
 # --------------------------------------------------
 # ------------------ SHORTCUTS ---------------------
